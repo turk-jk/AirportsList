@@ -16,6 +16,7 @@
 		B3D788B026E572C900DD8D74 /* AirportsListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D788AF26E572C900DD8D74 /* AirportsListTests.swift */; };
 		B3D788BB26E572C900DD8D74 /* AirportsListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D788BA26E572C900DD8D74 /* AirportsListUITests.swift */; };
 		B3D788CD26E572E900DD8D74 /* Airport.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D788CC26E572E900DD8D74 /* Airport.swift */; };
+		B3D788D626E5734800DD8D74 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D788D526E5734800DD8D74 /* NetworkClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		B3D788BA26E572C900DD8D74 /* AirportsListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsListUITests.swift; sourceTree = "<group>"; };
 		B3D788BC26E572C900DD8D74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3D788CC26E572E900DD8D74 /* Airport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airport.swift; sourceTree = "<group>"; };
+		B3D788D526E5734800DD8D74 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		B3D7889726E572C700DD8D74 /* AirportsList */ = {
 			isa = PBXGroup;
 			children = (
+				B3D788D426E5733000DD8D74 /* Networking */,
 				B3D788CB26E572DB00DD8D74 /* Models */,
 				B3D7889826E572C700DD8D74 /* AppDelegate.swift */,
 				B3D7889A26E572C700DD8D74 /* SceneDelegate.swift */,
@@ -137,6 +140,14 @@
 				B3D788CC26E572E900DD8D74 /* Airport.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B3D788D426E5733000DD8D74 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B3D788D526E5734800DD8D74 /* NetworkClient.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3D7889D26E572C700DD8D74 /* ViewController.swift in Sources */,
+				B3D788D626E5734800DD8D74 /* NetworkClient.swift in Sources */,
 				B3D788CD26E572E900DD8D74 /* Airport.swift in Sources */,
 				B3D7889926E572C700DD8D74 /* AppDelegate.swift in Sources */,
 				B3D7889B26E572C700DD8D74 /* SceneDelegate.swift in Sources */,
