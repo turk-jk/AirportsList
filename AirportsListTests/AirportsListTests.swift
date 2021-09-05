@@ -23,15 +23,15 @@ class AirportsListTests: XCTestCase {
 
         mockSession = createMockSession(fromJsonFile: "successResult", andStatusCode: 200, andError: nil)
         sut = NetworkClient(withSession: mockSession)
-
-        sut.fetchAirports(url: URL(string: "TestUrl")!) { (airports, errorMessage) in
-
+        
+        sut.fetchAirports(url: URL(string: "TestUrl")!) { (results) in
+            guard case let .success(airports) = results else {
+                XCTFail("case is not success")
+                return
+            }
             XCTAssertNotNil(airports)
-            XCTAssertNil(errorMessage)
-
-            XCTAssertEqual(airports!.count , 2)
-
-            let airport = airports!.first!
+            XCTAssertEqual(airports.count , 2)
+            let airport = airports.first!
             XCTAssertEqual(airport.airportName , "Anaa")
         }
     }
@@ -41,11 +41,12 @@ class AirportsListTests: XCTestCase {
         mockSession = createMockSession(fromJsonFile: "badData", andStatusCode: 200, andError: nil)
         sut = NetworkClient(withSession: mockSession)
 
-        sut.fetchAirports(url: URL(string: "TestUrl")!) { (airports, errorMessage) in
-
-            XCTAssertNotNil(errorMessage)
-            XCTAssertNil(airports)
-            XCTAssertEqual(errorMessage , "Bad data")
+        sut.fetchAirports(url: URL(string: "TestUrl")!) { (results) in
+            guard case let .failure(error) = results else {
+                XCTFail("case is not failure")
+                return
+            }
+            XCTAssertEqual(error, NetworkError.badData)
         }
     }
     
@@ -54,11 +55,12 @@ class AirportsListTests: XCTestCase {
         mockSession = createMockSession(fromJsonFile: "successResult", andStatusCode: 401, andError: nil)
         sut = NetworkClient(withSession: mockSession)
 
-        sut.fetchAirports(url: URL(string: "TestUrl")!) { (airports, errorMessage) in
-
-            XCTAssertNotNil(errorMessage)
-            XCTAssertNil(airports)
-            XCTAssertEqual(errorMessage , "statusCode: 401")
+        sut.fetchAirports(url: URL(string: "TestUrl")!) { (results) in
+            guard case let .failure(error) = results else {
+                XCTFail("case is not failure")
+                return
+            }
+            XCTAssertEqual(error, NetworkError.unhandledCode("statusCode: 401"))
         }
     }
 
@@ -67,11 +69,12 @@ class AirportsListTests: XCTestCase {
         mockSession = createMockSession(fromJsonFile: "successResult", andStatusCode: 404, andError: nil)
         sut = NetworkClient(withSession: mockSession)
 
-        sut.fetchAirports(url: URL(string: "TestUrl")!) { (airports, errorMessage) in
-
-            XCTAssertNotNil(errorMessage)
-            XCTAssertNil(airports)
-            XCTAssertEqual(errorMessage , "Bad Url")
+        sut.fetchAirports(url: URL(string: "TestUrl")!) { (results) in
+            guard case let .failure(error) = results else {
+                XCTFail("case is not failure")
+                return
+            }
+            XCTAssertEqual(error, NetworkError.badURL)
         }
     }
 
@@ -80,11 +83,12 @@ class AirportsListTests: XCTestCase {
         mockSession = createMockSession(fromJsonFile: "NoData", andStatusCode: 500, andError: nil)
         sut = NetworkClient(withSession: mockSession)
 
-        sut.fetchAirports(url: URL(string: "TestUrl")!) { (airports, errorMessage) in
-
-            XCTAssertNotNil(errorMessage)
-            XCTAssertNil(airports)
-            XCTAssertEqual(errorMessage, "No Data")
+        sut.fetchAirports(url: URL(string: "TestUrl")!) { (results) in
+            guard case let .failure(error) = results else {
+                XCTFail("case is not failure")
+                return
+            }
+            XCTAssertEqual(error, NetworkError.noData)
         }
     }
 
