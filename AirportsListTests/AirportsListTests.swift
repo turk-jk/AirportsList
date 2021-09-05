@@ -103,6 +103,16 @@ class AirportsListTests: XCTestCase {
         }
         return nil
     }
+    
+    func test_loadJson_NoData() {
+        let data = loadJson(file: "NoData")
+        XCTAssertNil(data)
+    }
+    
+    func test_loadJson_withData() {
+        let data = loadJson(file: "successResult")
+        XCTAssertNotNil(data)
+    }
 
     private func createMockSession(fromJsonFile file: String,
                                    andStatusCode code: Int,
