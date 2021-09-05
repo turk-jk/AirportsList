@@ -1,0 +1,64 @@
+[
+  {
+    "airportCode": "AAA",
+    "internationalAirport": "false",
+    "domesticAirport": "false",
+    "regionalAirport": "false",
+    "onlineIndicator": "false",
+    "eticketableAirport": "false",
+    "location": {
+      "aboveSeaLevel": -99999,
+      "latitude": "17.25",
+      "latitudeRadius": -0.304,
+      "longitude": "145.3",
+      "longitudeRadius": -2.5395,
+      "latitudeDirection": "S",
+      "longitudeDirection": "W"
+    },
+    "airportName": "Anaa",
+    "city": {
+      "cityCode": "AAA",
+      "cityName": "Anaa",
+      "timeZoneName": "Pacific/Tahiti"
+    },
+    "country": {
+      "countryCode": "PF",
+      "countryName": "French Polynesia"
+    },
+    "region": {
+      "regionCode": "SP",
+      "regionName": "South Pacific"
+    }
+  },
+  {
+    "airportCode": "AAB",
+    "internationalAirport": "false",
+    "domesticAirport": "false",
+    "regionalAirport": "false",
+    "onlineIndicator": "false",
+    "eticketableAirport": "false",
+    "location": {
+      "aboveSeaLevel": -99999,
+      "latitude": "26.45",
+      "latitudeRadius": -0.4669,
+      "longitude": "141",
+      "longitudeRadius": 2.4609,
+      "latitudeDirection": "S",
+      "longitudeDirection": "E"
+    },
+    "airportName": "Arrabury",
+    "city": {
+      "cityCode": "AAB",
+      "cityName": "Arrabury",
+      "timeZoneName": "Australia/Brisbane"
+    },
+    "country": {
+      "countryCode": "AU",
+      "countryName": "Australia"
+    },
+    "region": {
+      "regionCode": "AU",
+      "regionName": "Australia"
+    }
+  }
+]

@@ -17,6 +17,9 @@
 		B3D788BB26E572C900DD8D74 /* AirportsListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D788BA26E572C900DD8D74 /* AirportsListUITests.swift */; };
 		B3D788CD26E572E900DD8D74 /* Airport.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D788CC26E572E900DD8D74 /* Airport.swift */; };
 		B3D788D626E5734800DD8D74 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D788D526E5734800DD8D74 /* NetworkClient.swift */; };
+		B3D788DE26E574F500DD8D74 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D788DD26E574F500DD8D74 /* MockURLSession.swift */; };
+		B3D788E326E5757700DD8D74 /* successResult.json in Resources */ = {isa = PBXBuildFile; fileRef = B3D788E226E5757700DD8D74 /* successResult.json */; };
+		B3D788F026E5776800DD8D74 /* badData.json in Resources */ = {isa = PBXBuildFile; fileRef = B3D788EF26E5776800DD8D74 /* badData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		B3D788BC26E572C900DD8D74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3D788CC26E572E900DD8D74 /* Airport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airport.swift; sourceTree = "<group>"; };
 		B3D788D526E5734800DD8D74 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		B3D788DD26E574F500DD8D74 /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
+		B3D788E226E5757700DD8D74 /* successResult.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = successResult.json; sourceTree = "<group>"; };
+		B3D788EF26E5776800DD8D74 /* badData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = badData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,8 +125,11 @@
 		B3D788AE26E572C900DD8D74 /* AirportsListTests */ = {
 			isa = PBXGroup;
 			children = (
+				B3D788EF26E5776800DD8D74 /* badData.json */,
+				B3D788E226E5757700DD8D74 /* successResult.json */,
 				B3D788AF26E572C900DD8D74 /* AirportsListTests.swift */,
 				B3D788B126E572C900DD8D74 /* Info.plist */,
+				B3D788DD26E574F500DD8D74 /* MockURLSession.swift */,
 			);
 			path = AirportsListTests;
 			sourceTree = "<group>";
@@ -263,6 +272,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3D788E326E5757700DD8D74 /* successResult.json in Resources */,
+				B3D788F026E5776800DD8D74 /* badData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3D788DE26E574F500DD8D74 /* MockURLSession.swift in Sources */,
 				B3D788B026E572C900DD8D74 /* AirportsListTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

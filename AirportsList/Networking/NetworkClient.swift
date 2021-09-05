@@ -55,8 +55,11 @@ class NetworkClient {
 
             switch statusCode {
             case 200:
-                let airports = try! JSONDecoder().decode([Airport].self, from: data)
-                completion(airports, nil)
+                if let airports = try? JSONDecoder().decode([Airport].self, from: data){
+                    completion(airports, nil)
+                }else{
+                    completion(nil, "Bad data")                    
+                }
             case 404:
                 completion(nil, "Bad Url")
             default:
