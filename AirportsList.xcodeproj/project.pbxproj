@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B3D7889926E572C700DD8D74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D7889826E572C700DD8D74 /* AppDelegate.swift */; };
 		B3D7889B26E572C700DD8D74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D7889A26E572C700DD8D74 /* SceneDelegate.swift */; };
-		B3D7889D26E572C700DD8D74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D7889C26E572C700DD8D74 /* ViewController.swift */; };
 		B3D788A026E572C700DD8D74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3D7889E26E572C700DD8D74 /* Main.storyboard */; };
 		B3D788A226E572C900DD8D74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3D788A126E572C900DD8D74 /* Assets.xcassets */; };
 		B3D788A526E572C900DD8D74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3D788A326E572C900DD8D74 /* LaunchScreen.storyboard */; };
@@ -20,6 +19,16 @@
 		B3D788DE26E574F500DD8D74 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D788DD26E574F500DD8D74 /* MockURLSession.swift */; };
 		B3D788E326E5757700DD8D74 /* successResult.json in Resources */ = {isa = PBXBuildFile; fileRef = B3D788E226E5757700DD8D74 /* successResult.json */; };
 		B3D788F026E5776800DD8D74 /* badData.json in Resources */ = {isa = PBXBuildFile; fileRef = B3D788EF26E5776800DD8D74 /* badData.json */; };
+		B3D788FC26E57B8F00DD8D74 /* AirportsTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D788FB26E57B8F00DD8D74 /* AirportsTableController.swift */; };
+		B3D7890426E57BC600DD8D74 /* AirportTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D7890326E57BC600DD8D74 /* AirportTableViewModel.swift */; };
+		B3D7890926E57BE500DD8D74 /* AirportTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D7890826E57BE500DD8D74 /* AirportTableDelegate.swift */; };
+		B3D7890F26E5868C00DD8D74 /* UIRefreshControl+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D7890E26E5868C00DD8D74 /* UIRefreshControl+Ext.swift */; };
+		B3D7891726E587DB00DD8D74 /* AirportTableViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D7891626E587DB00DD8D74 /* AirportTableViewModelTests.swift */; };
+		B3D7891C26E5890B00DD8D74 /* XCTestFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D7891B26E5890B00DD8D74 /* XCTestFunctions.swift */; };
+		B3D7892126E58F0A00DD8D74 /* MockAirportTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D7892026E58F0A00DD8D74 /* MockAirportTable.swift */; };
+		B3D7892626E58F3C00DD8D74 /* MockAirportTableTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D7892526E58F3C00DD8D74 /* MockAirportTableTest.swift */; };
+		B3D7892E26E591FF00DD8D74 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D7892D26E591FF00DD8D74 /* NetworkError.swift */; };
+		B3D7893326E5924600DD8D74 /* NetworkErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D7893226E5924600DD8D74 /* NetworkErrorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +52,6 @@
 		B3D7889526E572C700DD8D74 /* AirportsList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirportsList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3D7889826E572C700DD8D74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3D7889A26E572C700DD8D74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B3D7889C26E572C700DD8D74 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B3D7889F26E572C700DD8D74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B3D788A126E572C900DD8D74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3D788A426E572C900DD8D74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,6 +67,16 @@
 		B3D788DD26E574F500DD8D74 /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
 		B3D788E226E5757700DD8D74 /* successResult.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = successResult.json; sourceTree = "<group>"; };
 		B3D788EF26E5776800DD8D74 /* badData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = badData.json; sourceTree = "<group>"; };
+		B3D788FB26E57B8F00DD8D74 /* AirportsTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsTableController.swift; sourceTree = "<group>"; };
+		B3D7890326E57BC600DD8D74 /* AirportTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportTableViewModel.swift; sourceTree = "<group>"; };
+		B3D7890826E57BE500DD8D74 /* AirportTableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportTableDelegate.swift; sourceTree = "<group>"; };
+		B3D7890E26E5868C00DD8D74 /* UIRefreshControl+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+Ext.swift"; sourceTree = "<group>"; };
+		B3D7891626E587DB00DD8D74 /* AirportTableViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportTableViewModelTests.swift; sourceTree = "<group>"; };
+		B3D7891B26E5890B00DD8D74 /* XCTestFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestFunctions.swift; sourceTree = "<group>"; };
+		B3D7892026E58F0A00DD8D74 /* MockAirportTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAirportTable.swift; sourceTree = "<group>"; };
+		B3D7892526E58F3C00DD8D74 /* MockAirportTableTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAirportTableTest.swift; sourceTree = "<group>"; };
+		B3D7892D26E591FF00DD8D74 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		B3D7893226E5924600DD8D74 /* NetworkErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,11 +127,12 @@
 		B3D7889726E572C700DD8D74 /* AirportsList */ = {
 			isa = PBXGroup;
 			children = (
+				B3D7890D26E5867300DD8D74 /* Helpers */,
+				B3D788FA26E57B5400DD8D74 /* AirportsVVM */,
 				B3D788D426E5733000DD8D74 /* Networking */,
 				B3D788CB26E572DB00DD8D74 /* Models */,
 				B3D7889826E572C700DD8D74 /* AppDelegate.swift */,
 				B3D7889A26E572C700DD8D74 /* SceneDelegate.swift */,
-				B3D7889C26E572C700DD8D74 /* ViewController.swift */,
 				B3D7889E26E572C700DD8D74 /* Main.storyboard */,
 				B3D788A126E572C900DD8D74 /* Assets.xcassets */,
 				B3D788A326E572C900DD8D74 /* LaunchScreen.storyboard */,
@@ -130,6 +149,11 @@
 				B3D788AF26E572C900DD8D74 /* AirportsListTests.swift */,
 				B3D788B126E572C900DD8D74 /* Info.plist */,
 				B3D788DD26E574F500DD8D74 /* MockURLSession.swift */,
+				B3D7891626E587DB00DD8D74 /* AirportTableViewModelTests.swift */,
+				B3D7891B26E5890B00DD8D74 /* XCTestFunctions.swift */,
+				B3D7892026E58F0A00DD8D74 /* MockAirportTable.swift */,
+				B3D7892526E58F3C00DD8D74 /* MockAirportTableTest.swift */,
+				B3D7893226E5924600DD8D74 /* NetworkErrorTests.swift */,
 			);
 			path = AirportsListTests;
 			sourceTree = "<group>";
@@ -155,8 +179,27 @@
 			isa = PBXGroup;
 			children = (
 				B3D788D526E5734800DD8D74 /* NetworkClient.swift */,
+				B3D7892D26E591FF00DD8D74 /* NetworkError.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		B3D788FA26E57B5400DD8D74 /* AirportsVVM */ = {
+			isa = PBXGroup;
+			children = (
+				B3D788FB26E57B8F00DD8D74 /* AirportsTableController.swift */,
+				B3D7890326E57BC600DD8D74 /* AirportTableViewModel.swift */,
+				B3D7890826E57BE500DD8D74 /* AirportTableDelegate.swift */,
+			);
+			path = AirportsVVM;
+			sourceTree = "<group>";
+		};
+		B3D7890D26E5867300DD8D74 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B3D7890E26E5868C00DD8D74 /* UIRefreshControl+Ext.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,11 +334,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3D7889D26E572C700DD8D74 /* ViewController.swift in Sources */,
+				B3D7890926E57BE500DD8D74 /* AirportTableDelegate.swift in Sources */,
 				B3D788D626E5734800DD8D74 /* NetworkClient.swift in Sources */,
 				B3D788CD26E572E900DD8D74 /* Airport.swift in Sources */,
 				B3D7889926E572C700DD8D74 /* AppDelegate.swift in Sources */,
+				B3D788FC26E57B8F00DD8D74 /* AirportsTableController.swift in Sources */,
+				B3D7890426E57BC600DD8D74 /* AirportTableViewModel.swift in Sources */,
+				B3D7892E26E591FF00DD8D74 /* NetworkError.swift in Sources */,
 				B3D7889B26E572C700DD8D74 /* SceneDelegate.swift in Sources */,
+				B3D7890F26E5868C00DD8D74 /* UIRefreshControl+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,7 +350,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3D7891C26E5890B00DD8D74 /* XCTestFunctions.swift in Sources */,
+				B3D7893326E5924600DD8D74 /* NetworkErrorTests.swift in Sources */,
+				B3D7892126E58F0A00DD8D74 /* MockAirportTable.swift in Sources */,
 				B3D788DE26E574F500DD8D74 /* MockURLSession.swift in Sources */,
+				B3D7891726E587DB00DD8D74 /* AirportTableViewModelTests.swift in Sources */,
+				B3D7892626E58F3C00DD8D74 /* MockAirportTableTest.swift in Sources */,
 				B3D788B026E572C900DD8D74 /* AirportsListTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

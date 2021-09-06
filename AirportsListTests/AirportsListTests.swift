@@ -21,7 +21,7 @@ class AirportsListTests: XCTestCase {
 
     func test_NetworkClient_successResult() {
 
-        mockSession = createMockSession(fromJsonFile: "successResult", andStatusCode: 200, andError: nil)
+        mockSession = XCTestFunctions.createMockSession(fromJsonFile: "successResult", andStatusCode: 200, andError: nil)
         sut = NetworkClient(withSession: mockSession)
         
         sut.fetchAirports(url: URL(string: "TestUrl")!) { (results) in
@@ -38,7 +38,7 @@ class AirportsListTests: XCTestCase {
     
     func test_NetworkClient_badData() {
 
-        mockSession = createMockSession(fromJsonFile: "badData", andStatusCode: 200, andError: nil)
+        mockSession = XCTestFunctions.createMockSession(fromJsonFile: "badData", andStatusCode: 200, andError: nil)
         sut = NetworkClient(withSession: mockSession)
 
         sut.fetchAirports(url: URL(string: "TestUrl")!) { (results) in
@@ -52,7 +52,7 @@ class AirportsListTests: XCTestCase {
     
     func test_NetworkClient_AnotherStatusCode() {
 
-        mockSession = createMockSession(fromJsonFile: "successResult", andStatusCode: 401, andError: nil)
+        mockSession = XCTestFunctions.createMockSession(fromJsonFile: "successResult", andStatusCode: 401, andError: nil)
         sut = NetworkClient(withSession: mockSession)
 
         sut.fetchAirports(url: URL(string: "TestUrl")!) { (results) in
@@ -66,7 +66,7 @@ class AirportsListTests: XCTestCase {
 
     func test_NetworkClient_404Result() {
 
-        mockSession = createMockSession(fromJsonFile: "successResult", andStatusCode: 404, andError: nil)
+        mockSession = XCTestFunctions.createMockSession(fromJsonFile: "successResult", andStatusCode: 404, andError: nil)
         sut = NetworkClient(withSession: mockSession)
 
         sut.fetchAirports(url: URL(string: "TestUrl")!) { (results) in
@@ -80,7 +80,7 @@ class AirportsListTests: XCTestCase {
 
     func test_NetworkClient_NoData() {
 
-        mockSession = createMockSession(fromJsonFile: "NoData", andStatusCode: 500, andError: nil)
+        mockSession = XCTestFunctions.createMockSession(fromJsonFile: "NoData", andStatusCode: 500, andError: nil)
         sut = NetworkClient(withSession: mockSession)
 
         sut.fetchAirports(url: URL(string: "TestUrl")!) { (results) in
@@ -92,34 +92,4 @@ class AirportsListTests: XCTestCase {
         }
     }
 
-    private func loadJson(file: String) -> Data? {
-
-        if let jsonFilePath = Bundle(for: type(of: self)).path(forResource: file, ofType: "json") {
-            let jsonFileURL = URL(fileURLWithPath: jsonFilePath)
-
-            if let jsonData = try? Data(contentsOf: jsonFileURL) {
-                return jsonData
-            }
-        }
-        return nil
-    }
-    
-    func test_loadJson_NoData() {
-        let data = loadJson(file: "NoData")
-        XCTAssertNil(data)
-    }
-    
-    func test_loadJson_withData() {
-        let data = loadJson(file: "successResult")
-        XCTAssertNotNil(data)
-    }
-
-    private func createMockSession(fromJsonFile file: String,
-                                   andStatusCode code: Int,
-                                   andError error: Error?) -> MockURLSession? {
-
-        let data = loadJson(file: file)
-        let response = HTTPURLResponse(url: URL(string: "TestUrl")!, statusCode: code, httpVersion: nil, headerFields: nil)
-        return MockURLSession(completionHandler: (data, response, error))
-    }
 }
