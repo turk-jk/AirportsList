@@ -33,6 +33,7 @@
 		B3D7893E26E594F700DD8D74 /* AirportDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D7893D26E594F700DD8D74 /* AirportDetailsViewModel.swift */; };
 		B3D7894326E5951700DD8D74 /* DetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D7894226E5951700DD8D74 /* DetailsCell.swift */; };
 		B3D7894B26E5963100DD8D74 /* AirportDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D7894A26E5963100DD8D74 /* AirportDetailsViewModelTests.swift */; };
+		B3D7895026E5996000DD8D74 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = B3D7894F26E5996000DD8D74 /* Readme.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		B3D7893D26E594F700DD8D74 /* AirportDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportDetailsViewModel.swift; sourceTree = "<group>"; };
 		B3D7894226E5951700DD8D74 /* DetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCell.swift; sourceTree = "<group>"; };
 		B3D7894A26E5963100DD8D74 /* AirportDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportDetailsViewModelTests.swift; sourceTree = "<group>"; };
+		B3D7894F26E5996000DD8D74 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 		B3D7888C26E572C700DD8D74 = {
 			isa = PBXGroup;
 			children = (
+				B3D7894F26E5996000DD8D74 /* Readme.md */,
 				B3D7889726E572C700DD8D74 /* AirportsList */,
 				B3D788AE26E572C900DD8D74 /* AirportsListTests */,
 				B3D788B926E572C900DD8D74 /* AirportsListUITests */,
@@ -327,6 +330,7 @@
 			files = (
 				B3D788A526E572C900DD8D74 /* LaunchScreen.storyboard in Resources */,
 				B3D788A226E572C900DD8D74 /* Assets.xcassets in Resources */,
+				B3D7895026E5996000DD8D74 /* Readme.md in Resources */,
 				B3D788A026E572C700DD8D74 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
