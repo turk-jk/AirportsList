@@ -46,7 +46,11 @@ extension AirportsTableController{
 // MARK: - TableView Delegate
 extension AirportsTableController{
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //Show detailed view
+        let airport = viewModel.airport(forRowAt: indexPath.row)
+        let viewModel = AirportDetailsViewModel(airport: airport)
+        let newVC = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(identifier: "AirportDetailsViewController") as! AirportDetailsViewController
+        newVC.viewModel = viewModel
+        self.navigationController?.pushViewController(newVC, animated: true)
     }
 }
 

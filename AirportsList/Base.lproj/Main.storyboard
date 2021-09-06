@@ -70,6 +70,63 @@
             </objects>
             <point key="canvasLocation" x="737.68115942028987" y="127.90178571428571"/>
         </scene>
+        <!--Airport Details View Controller-->
+        <scene sceneID="M6A-Es-KOv">
+            <objects>
+                <tableViewController storyboardIdentifier="AirportDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Cu1-fY-oqc" customClass="AirportDetailsViewController" customModule="AirportsList" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="rwl-FJ-zrf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailCell" id="Epu-8I-fny" customClass="DetailsCell" customModule="airports" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="37"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Epu-8I-fny" id="dAl-7i-RKT">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="37"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aIw-yv-nmP">
+                                            <rect key="frame" x="8" y="8" width="398" height="21"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jxe-CG-jwg">
+                                                    <rect key="frame" x="0.0" y="0.0" width="199" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="info" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnK-eh-4Tk">
+                                                    <rect key="frame" x="199" y="0.0" width="199" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="aIw-yv-nmP" firstAttribute="leading" secondItem="dAl-7i-RKT" secondAttribute="leading" constant="8" id="6zy-M9-jpC"/>
+                                        <constraint firstAttribute="bottom" secondItem="aIw-yv-nmP" secondAttribute="bottom" constant="8" id="8nz-tU-vxL"/>
+                                        <constraint firstAttribute="trailing" secondItem="aIw-yv-nmP" secondAttribute="trailing" constant="8" id="FJb-p8-KJ1"/>
+                                        <constraint firstItem="aIw-yv-nmP" firstAttribute="top" secondItem="dAl-7i-RKT" secondAttribute="top" constant="8" id="zqk-HT-n71"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="info" destination="rnK-eh-4Tk" id="UPe-Sx-oaP"/>
+                                    <outlet property="label" destination="Jxe-CG-jwg" id="QYz-E6-Wn6"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Cu1-fY-oqc" id="Q3m-dY-3Ks"/>
+                            <outlet property="delegate" destination="Cu1-fY-oqc" id="7oh-Oy-gx2"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vzc-Fd-QhN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2310" y="128"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
